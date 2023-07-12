@@ -1,5 +1,6 @@
 <template>
-  <div class="container text-center">
+  <div class="container">
+    <div class="container text-center">
     <h1>This is Weather App</h1>
     <div class="form-group">
       <label for="my-select">{{ name }} City</label>
@@ -15,8 +16,11 @@
       </select>
     </div>
   </div>
-  <div class="container text-center">
-    {{ weather }}
+  <div v-if="pending" class="container text-center box">
+<img src="~/assets/loading.gif" alt="">
+  </div>
+  <div class="container text-center" v-else >
+ 
     <h1>{{ weather.weather[0].main }}</h1>
     <h5>{{ weather.name }} : <span>{{ weather.main.temp }} °C</span></h5>
     <div>
@@ -45,11 +49,12 @@
       />
     </div>
     <h1>{{ weather.weather[0].description }}</h1>
-    <h1>Feels Like : {{ weather.main.feels_like }}</h1>
+    <h1>Feels Like : {{ weather.main.feels_like }} °C </h1>
     <!-- <h1>Minimum Temperature : {{ weather.main.temp_min }}</h1>
     <h1>Maximum Temperature : {{ weather.main.temp_max }}</h1> -->
-    <h1>Wind Speed : {{ weather.wind.speed }}</h1>
+    <h1>Wind Speed : {{ weather.wind.speed }}km/hr</h1>
 
+  </div>
   </div>
 </template>
 
@@ -62,11 +67,17 @@ const { data: city } = await useFetch(
   "https://www.nepallocation.com.np/api/v1/city/list",
   { headers: { Authorization: "Bearer 5SpnFQK-Jtrds-sziYwEOvM1" }}
 );
-const { data: weather } = await useFetch(url, { refetch: true });
+const { data: weather,pending } = await useFetch(url, { refetch: true });
 function getUrl (city){
-  url.value = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=edab429d4f4059d040bd14483316c26d&units=metric`;
+  url.value = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=edab429d4f4059d040bd14483316c26d&units=metric`;
 };
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.box{
+  margin: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+</style>
