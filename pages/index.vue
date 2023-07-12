@@ -2,17 +2,14 @@
   <div class="container">
     <div class="container text-center">
     <h1>This is Weather App</h1>
-    <div class="form-group">
-      <label for="my-select">{{ name }} City</label>
-      <select id="my-select" class="form-control" name=""
+    <div class="mb-3">
+      <label for="" class="form-label"> {{ name }}City</label>
+      <select class="form-select form-select-lg" name="" id=""
       v-model="name"
       @change="getUrl(name)">
-        <option selected
-          :value="city.name"
+        <option selected   :value="city.name"
           v-for="(city, index) in city.data.data"
-          class="text-center" >
-          {{ city.name }}
-        </option>
+          class="text-center" >{{ city.name }}</option>
       </select>
     </div>
   </div>
