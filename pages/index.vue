@@ -64,7 +64,7 @@ const url = ref(
   `https://api.openweathermap.org/data/2.5/weather?q=Dharan&appid=edab429d4f4059d040bd14483316c26d&units=metric`
 );
 const { data: city } = await useFetch(
-  "https://www.nepallocation.com.np/api/v1/city/list",
+  "https://www.nepallocation.com.np/api/v1/city/list", 
   { headers: { Authorization: "Bearer 5SpnFQK-Jtrds-sziYwEOvM1" }}
 );
 const { data: weather,pending } = await useFetch(url, { refetch: true });
