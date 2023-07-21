@@ -3,7 +3,7 @@
     <div class="container text-center">
       <h1>This is Weather App</h1>
       <div class="mb-3">
-        <label for="" class="form-label"> {{ name }}City</label>
+        <label for="" class="form-label"> {{ name }} City</label>
         <select
           class="form-select form-select-lg"
           name=""

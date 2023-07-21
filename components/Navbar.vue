@@ -2,14 +2,13 @@
     <div>
         
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl grid lg:grid-cols-6 md:grid-cols-2 gap-5">
-      <NuxtLink to="/">
-          <img src="~/assets/logo.png"  alt="Flowbite Logo"  style="height: 100px;"/>
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
-          <h1 class="text-xl"> <strong> Weather App </strong> </h1>
-      </NuxtLink>
-    <div class="mt-10">
-      <NuxtLink to="/Today"  class="me-2" > Today</NuxtLink>
+    <div class="max-w-screen-xl  gap-5 flex">
+                  <!-- <img src="~/assets/logo.png" class=" h-20 mr-3" alt="FlowBite Logo" /> -->
+                  <NuxtLink to="/" class="flex items-center">
+                  <span class=" m-4 self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><i class="fa-solid fa-house"></i> </span>
+              </NuxtLink>
+    <div class="mt-4 font-semibold text-2xl">
+      <NuxtLink to="/today"  class="me-2" > Today</NuxtLink>
     </div>
 
     </div>

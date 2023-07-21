@@ -10,7 +10,7 @@
             </slot>
         </main>
         <footer>
-
+            <Last />
         </footer>
     </div>
 </template>
