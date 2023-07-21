@@ -1,6 +1,7 @@
 <template>
     <div>
         <header>
+            <h1  class="text-center  text-xl p-2">Weather Forecast</h1>
             <Navbar />
         </header>
 
