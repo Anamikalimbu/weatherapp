@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="grid lg:grid-cols-3 md:grid-cols-1">
+    <div class="flex justify-center">
       <label for="" class="text-black lg:text-3xl md:text:xl"
         >Search City</label
       >
