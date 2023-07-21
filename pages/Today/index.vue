@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex justify-center">
-      <label for="" class="text-white lg:text-3xl md:text:xl"
+      <label for="" class="text-black lg:text-3xl md:text:xl"
         >Search City</label
       >
       <input
