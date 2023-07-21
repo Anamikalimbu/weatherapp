@@ -1,11 +1,12 @@
 <template>
-  <div class="container">
-    <div class="container text-center">
+  <div >
+  
+    <div class="container text-center text-white">
       <h1>This is Weather App</h1>
       <div class="mb-3">
         <label for="" class="form-label"> {{ name }} City</label>
         <select
-          class="form-select form-select-lg"
+          class="form-select form-select-lg bg-black text-white"
           name=""
           id=""
           v-model="name"
@@ -15,7 +16,7 @@
             selected
             :value="city.name"
             v-for="(city, index) in city.data.data"
-            class="text-center"
+            class="text-center bg-black text-white"
           >
             {{ city.name }}
           </option>
@@ -26,8 +27,8 @@
       <img src="~/assets/loading.gif" alt="" />
     </div>
     <div class="container text-center" v-else>
-      <h1 class="animated-text">{{ weather.weather[0].main }}</h1>
-      <h5 class="animated-text">
+      <h1 class="animated-text text-white">{{ weather.weather[0].main }}</h1>
+      <h5 class="animated-text text-white">
         {{ weather.name }} : <span>{{ weather.main.temp }} °C</span>
       </h5>
       <div class=" flex justify-content-center">
@@ -61,11 +62,11 @@
           style="height: 200px; width: 20%;"
         />
       </div>
-      <h5 class="animated-text">{{ weather.weather[0].description }}</h5>
-      <h5 class="animated-text">Feels Like : {{ weather.main.feels_like }} °C</h5>
+      <h5 class="animated-text text-white">{{ weather.weather[0].description }}</h5>
+      <h5 class="animated-text text-white">Feels Like : {{ weather.main.feels_like }} °C</h5>
       <!-- <h1>Minimum Temperature : {{ weather.main.temp_min }}</h1>
     <h1>Maximum Temperature : {{ weather.main.temp_max }}</h1> -->
-      <h5 class="animated-text">Wind Speed : {{ weather.wind.speed }}km/hr</h5>
+      <h5 class="animated-text text-white">Wind Speed : {{ weather.wind.speed }}km/hr</h5>
     </div>
   </div>
 </template>
@@ -82,7 +83,9 @@ const { data: city } = await useFetch(
 const { data: weather, pending } = await useFetch(url, { refetch: true });
 function getUrl(city) {
   url.value = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=edab429d4f4059d040bd14483316c26d&units=metric`;
-}
+};
+
+
 </script>
 
 <style scoped>

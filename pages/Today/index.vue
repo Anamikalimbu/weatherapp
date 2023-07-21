@@ -1,7 +1,8 @@
 <template>
   <div>
-    <div class="flex justify-center">
-      <label for="" class="text-black lg:text-3xl md:text:xl"
+    <h1 class="text-white text-center p-4">This is Weather App</h1>
+    <div class="flex justify-center md:flex ">
+      <label for="" class="text-white lg:text-3xl md:text-sm"
         >Search City</label
       >
       <input
@@ -11,7 +12,7 @@
         placeholder="Search City"
       />
       <button
-        @click="getUrl(name)"
+      @click="getUrl(name)"
         class="py-2 px-5 bg-blue-500 text-white rounded-full"
       >
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -21,47 +22,52 @@
       <img src="~/assets/loading.gif" alt="" />
     </div>
     <div class=" text-center  mt-20 transform -translate-y-10 hover:-translate-y-4 transition duration-700 grid grid-cols-4" v-else>
-      <div class=" col-span-4   border border-white bg-slate">
-        <div class=" flex justify-content-center" v-for="(current,index) in weather.current.condition" :key="index">
-        <h3>{{ current.text }}</h3>
+      <div class=" col-span-4 bg-slate">
+        <div class=" flex justify-content-center" v-for="(condition,index) in weather.current.condition" :key="index">
+        <h3>{{ condition.text }}</h3>
 
         <img
           src="~/assets/rainy.gif"
           alt=""
-          v-if="current.text == 'Light rain shower'"
+          v-if="condition.text == 'Light rain shower'"
         />
 
         <img
           src="~/assets/cloudy.gif"
           alt=""
-          v-if="current.text == 'Partly cloudy'"
+          v-if="condition.text == 'Partly cloudy'"
         />
 
         <img
           src="~/assets/sun.gif"
           alt=""
-          v-if="current.text == 'Clear'"
+          v-if="condition.text == 'Clear'"
         />
 
         <img
           src="~/assets/wind.gif"
           alt=""
-          v-if="current.text == 'Wind'"
+          v-if="condition.text == 'Wind'"
         />
         <img
           src="~/assets/Thunderstorms.gif"
           alt=""
-          v-if="current.text == 'Thunderstorm'"
+          v-if="condition.text == 'Thunderstorm'"
           style="height: 200px; width: 20%;"
         />
         
       </div>
-      <h5>
+      <h5 class="text-white">
         {{ weather.location.name }} : <span>{{ weather.current.temp_c }} °C</span>
       </h5>
-      <h5>Date/Time : {{ weather.location.localtime }}</h5>
-      <h4> Country : {{ weather.location.country }}</h4>
-      <h4>Wind Speed : {{ weather.current.wind_kph }} km/hr</h4>
+      <h5 class="text-white">Date/Time : {{ weather.location.localtime }}</h5>
+      <h4 class="text-white"> Country : {{ weather.location.country }}</h4>
+      <h4 class="text-white"> Region : {{ weather.location.region }}</h4>
+      <h4 class="text-white"> Continent/CountryCapital : {{ weather.location.tz_id }}</h4>
+      <h4 class="text-white"> Latitude : {{weather.location.lat}}°</h4>
+      <h4 class="text-white"> Longitude : {{weather.location.lon}}°</h4>
+      <h5 class="text-white">Feels Like : {{ weather.location.feelslike_c }} °C</h5>
+      <h4 class="text-white">Wind Speed : {{ weather.current.wind_kph }} km/hr</h4>
     
       <!-- <h5>{{ weather.weather[0].description }}</h5>
       <h5>Feels Like : {{ weather.main.feels_like }} °C</h5> -->
