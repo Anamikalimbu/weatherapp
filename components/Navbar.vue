@@ -10,9 +10,6 @@
       </NuxtLink>
     <div class="mt-10">
       <NuxtLink to="/Today"  class="me-2" > Today</NuxtLink>
-      <NuxtLink to="/Hourly" class="me-2"  >Hourly</NuxtLink>
-      <NuxtLink to="/Daily" class="me-2"  >Daily</NuxtLink>
-
     </div>
 
     </div>
