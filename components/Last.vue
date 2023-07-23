@@ -10,7 +10,7 @@
                   <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Weather Forecast </span>
               </a>
           </div>
-          <div class="grid lg:grid-cols-3 gap-8 sm:gap-4 md:grid-cols-2 sm:grid-cols-2">
+          <div class="grid grid-cols-2 gap-8 sm:gap-4 md:grid-cols-2 sm:grid-cols-1">
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
