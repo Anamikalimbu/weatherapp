@@ -7,9 +7,9 @@
                   <NuxtLink to="/" class="flex items-center">
                   <span class=" m-4 self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white"><i class="fa-solid fa-house"></i> </span>
               </NuxtLink>
-    <div class="mt-4 font-semibold text-2xl text-white">
+    <!-- <div class="mt-4 font-semibold text-2xl text-white">
       <NuxtLink to="/today"  class="me-2" > Today</NuxtLink>
-    </div>
+    </div> -->
 
     </div>
   </nav>
