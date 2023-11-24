@@ -4,7 +4,7 @@
 <footer class=" dark:bg-gray-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
+          <div class="mb-3 md:mb-0">
               <a href="https://flowbite.com/" class="flex items-center">
                   <img src="~/assets/logo.png" class=" h-20 mr-3" alt="FlowBite Logo" />
                   <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Weather Forecast </span>
@@ -12,12 +12,12 @@
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                  <h2 class="mb-1 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-2">
+                      <li class="mb-1">
                           <a href="https://flowbite.com/" target="_blank" class="hover:underline">Flowbite</a>
                       </li>
-                      <li class="mb-2">
+                      <li class="mb-1">
                           <a href="https://tailwindcss.com/" target="_blank" class="hover:underline">Tailwind CSS</a>
                       </li>
                       <li>
@@ -26,12 +26,12 @@
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                  <h2 class="mb-1 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-2">
+                      <li class="mb-1">
                           <a href="https://github.com/Anamikalimbu" target="_blank" class="hover:underline ">Github</a>
                       </li>
-                      <li class="mb-2">
+                      <li class="mb-1">
                           <a href="https://www.facebook.com/anamika.limbu.942" target="_blank" class="hover:underline">Facebook</a>
                       </li>
                       <li>
